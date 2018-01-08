@@ -17,7 +17,7 @@ ENV GATLING_VERSION 2.2.2
 
 
 # install gatling
-RUN adduser -D -s /bin/bash -u 495 jenkins
+RUN adduser -D -s /bin/bash -h /home/jenkins -u 497 jenkins
 
 RUN chown -R jenkins:jenkins /opt 
 RUN chown -R jenkins:jenkins /tmp
