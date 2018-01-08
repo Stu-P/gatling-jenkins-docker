@@ -26,6 +26,7 @@ USER jenkins
 
 # create directory for gatling install
 RUN mkdir -p gatling
+RUN mkdir -p gatling/results
 
   RUN mkdir -p /tmp/downloads && \
   wget -q -O /tmp/downloads/gatling-$GATLING_VERSION.zip \
