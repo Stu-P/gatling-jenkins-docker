@@ -35,4 +35,7 @@ VOLUME ["/opt/gatling/conf", "/opt/gatling/results", "/opt/gatling/user-files"]
 ENV PATH /opt/gatling/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV GATLING_HOME /opt/gatling
 
-ENTRYPOINT ["/bin/bash"]
+RUN useradd -ms /bin/bash jenkins
+USER jenkins
+
+ENTRYPOINT ["gatling.sh"]
